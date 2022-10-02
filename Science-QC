@@ -1,0 +1,18 @@
+from googlesearch import search
+from webbrowser import open
+v=int(input("How many references do you have? "))
+for i in range(v):
+     print('for the reference number',v+1,"enter the doi on opened website")
+     ip = ("https://www.citationmachine.net/mla/cite-a-journal")
+     for url in search(ip, stop=1):
+          open(url)
+     x = input("From the data retrived from the website enter the name of the author:"
+               "like This Hesham-Sallam: ")
+     ip = ("https://www.researchgate.net/profile/" + x)
+     for url in search(ip, stop=1):
+          print("from here you could know the credibility of this Author",url)
+     y = input("The name of the Journal: Like this Nature: ")
+     ip = ("https://www.ncbi.nlm.nih.gov/nlmcatalog/?term=" + y)
+     for url in search(ip, stop=1):
+          print("from here you could know the credibility of this journal and if you could not find it, most propaply it is not indexed",url)
+print("Thanks for your seeks to achieve a proper content")
